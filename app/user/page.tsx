@@ -1,9 +1,16 @@
+import React from 'react'
+import Userpage from './userpage'
 
+interface Props{
+  searchParams:{sortOrder:string}
+}
 
-const Userpage = () => {
+const page = ({searchParams:{sortOrder}}:Props) => {
   return (
-    <div>Userpage</div>
+    <div>
+      <Userpage sortOrder={sortOrder} />
+    </div>
   )
 }
 
-export default Userpage
+export default page
